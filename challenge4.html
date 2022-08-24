@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let myfunc = async () => {
+
+            let str1 = "this is a plain text";
+            let str2 = "this is a plain text";
+
+            let mypromise = new Promise(function (resolve, reject) {
+                if (str1 === str2) {
+                    resolve();
+                }
+                else {
+                    reject();
+                }
+            });
+            mypromise.then(() => { console.log("Success, No error found") }).catch(() => { console.log("error found") });
+        }
+
+        myfunc();
+    </script>
+
+</body>
+
+</html>
